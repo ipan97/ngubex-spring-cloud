@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: discovery-svc
+
+server:
+  port: ${PORT:8080}
+
+eureka:
+  instance:
+    hostname: localhost
+    secure-port: 443
+    non-secure-port-enabled: false
+    statusPageUrl: https://${eureka.instance.hostname}/info
+    healthCheckUrl: https://${eureka.instance.hostname}/health
