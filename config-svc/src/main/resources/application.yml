@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: config-svc
+  port: 8081
+  cloud:
+    config:
+     server:
+       git:
+          uri: file:///${user.home}/application-config
+          clone-on-start: true
